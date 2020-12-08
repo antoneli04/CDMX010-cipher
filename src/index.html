@@ -1,13 +1,103 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
+    <meta charset="utf-8" />
+    <title>Cipher Vault</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="root">
-      <h1>Hello world!</h1>
+      <div class="pantallaUno" id="pantallaUno">
+        <div class="contenedor" id="contenedor">
+          <img src="img/logo.png" alt="Logo" />
+          <br />
+          <h1 class="logo">Cipher Vault</h1>
+          <br />
+          <form action="" name="formulario" method="get">
+            <input
+              class="btn-usuario"
+              type="text"
+              placeholder="Usuario"
+              name="Usuario"
+              required
+              id="usuario"
+            />
+            <br /><br />
+            <input
+              class="btn-usuario"
+              type="password"
+              name="password"
+              required
+              id="password"
+            />
+            <br />
+            <br />
+            <input
+              class="btn-enviar"
+              id="enviar"
+              type="submit"
+              name="Enviar"
+              value="Enviar"
+            />
+          </form>
+          <br /><br />
+        </div>
+        <br /><br />
+      </div>
+
+      <div class="pantallaDos" id="pantallaDos">
+        <div class="contenedorBienvenido">
+          <img class="imagen" src="img/logo.png" alt="logo" />
+          <h1 class="bienvenido titulo">Bienvenido a Cipher Vault</h1>
+          <h2 class="bienvenido">¡Nombre de Usuario!</h2>
+        </div>
+
+        <div class="contenedorTextArea" id="contenedorCifrar">
+          <textarea
+            class="textArea"
+            name="cifrar"
+            id="cifrar"
+            placeholder="Escribe tu mensaje a Cifrar"
+            required
+          ></textarea>
+          <button type="submit" id="btn-cifrar">Cifrar</button>
+          <br />
+          <div class="contenedorIzq">
+            <button>Copiar</button>
+            <button>Borrar</button>
+          </div>
+        </div>
+
+        <div class="contenedorDesplazamiento">
+          <input
+            class="desplazamiento"
+            type="number"
+            placeholder="Llave"
+            required
+          />
+        </div>
+
+        <div class="contenedorTextArea" id="contenedorDescifrar">
+          <textarea
+            class="textArea"
+            name="descifrar"
+            id="descifrar"
+            placeholder="Escribe tu mensaje a Descifrar"
+            required
+          ></textarea>
+          <button type="submit" id="btn-descifrar">Descifrar</button>
+          <br />
+          <div class="contenedorIzq">
+            <button>Copiar</button>
+            <button>Borrar</button>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="index.js" type="module"></script>
   </body>
