@@ -5,32 +5,45 @@ console.log(cipher);
 //aqui vas a escuchar el DOM
 
 // Boton cifrar
-var cifrarTexto = function () {
-  alert("Cifrar Texto");
-};
+document.getElementById("btn-cifrar").addEventListener("click", function(){
+  var mensaje = document.getElementById("cifrar").value;
+  var numDesplazamientos = document.getElementById("desplazamiento").value;
+  var valorFijo = parseInt(numDesplazamientos);
+  document.getElementById("descifrar").innerHTML = cipher.encode(mensaje, valorFijo);
+}, true);
 
-var botonCifrar = document.getElementById("btn-cifrar");
-botonCifrar.addEventListener("click", cifrarTexto);
-
-//---------------------------------------------------------------
 //Boton Descifrar
-var descifrarTexto = function () {
-  alert("descifrar Texto");
-};
 
-var botonDescifrar = document.getElementById("btn-descifrar");
-botonDescifrar.addEventListener("click", descifrarTexto);
+document.getElementById("btn-descifrar").addEventListener("click", function(){
+  var mensaje = document.getElementById("descifrar").value;
+  var numDesplazamientos = document.getElementById("desplazamiento").value;
+  var valorFijo = parseInt(numDesplazamientos);
+  document.getElementById("cifrar").innerHTML = cipher.decode(mensaje, valorFijo);
+}, true);
 
-//-----------------------------------------------------------------
-// Cifrado
+//Boton Borrar Cifrado
 
-saludo();
+document.getElementById("borrarEncriptado").addEventListener("click", function(){
+  document.getElementById("cifrar").value = "";
+}, true);
 
-//-------------------------------------------------------
-// Prueba modulos
+//Boton Borrar Descifrado
 
-// import cipher from './cipher';
+document.getElementById("borrarDesencriptado").addEventListener("click", function(){
+  document.getElementById("descifrar").value = "";
+}, true);
 
-cipher.log("here we go");
+//Boton Copiar encriptado
 
-cipher.announce("here we go");
+document.getElementById("copiarEncriptado").addEventListener("click", function(){
+  let contenido = document.getElementById("cifrar")
+  contenido.select();
+  document.execCommand("copy");
+});
+
+//Boton Copiar Desencriptado
+document.getElementById("copiarDesencriptado").addEventListener("click", function(){
+  let contenido = document.getElementById("descifrar")
+  contenido.select();
+  document.execCommand("copy");
+});
