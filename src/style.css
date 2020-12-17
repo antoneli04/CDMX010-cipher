@@ -8,28 +8,46 @@ body {
 
 .pantallaUno {
   background-color: #a8dadc;
-  width: 80%;
+  width: 60%;
   padding: 20%;
+  display: flex;
+  justify-content: center;
 }
 
 .contenedor {
   background-color: #f1faee;
-  width: 60%;
+  width: 700px;
+  height: 500px;
   border: 5px solid #1d3557;
   border-radius: 20px;
   padding: 50px;
   text-align: center;
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5);
+  margin left: 600px;
 }
 
 .pantallaUno .contenedor img {
-  width: 300px;
+  width: 200px;
   padding-bottom: 0;
+}
+
+@keyframes entrar {
+  0%{transform: translate(0px);/* width: 150px; */}
+  25%{transform: translate(100px);/*width: 200px; */}
+  50%{transform: rotate(180deg);/* width: 250x; */}
+  75%{transform: translate(-100px); /*width: 200px; */}
+  100%{transform: translate(0px); /*width: 150px; */}
+}
+
+.moveRight{
+  animation-name: entrar;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
 
 .logo {
   font-family: "Open Sans", sans-serif;
-  font-size: 70px;
+  font-size: 60px;
   color: #1d3557;
 }
 
@@ -62,6 +80,24 @@ body {
 .pantallaDos {
   background-color: #f1faee;
   width: 100%;
+  animation-name: colores;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+ /* display: none; */
+}
+
+@keyframes img{
+  0%{width: 150px;}
+  25%{width: 200px;}
+  50%{width: 250px;}
+  75%{width: 200;}
+  100%{width: 150px;}
+}
+
+.move {
+  animation-name: img;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
 
 .pantallaDos img {
@@ -80,12 +116,27 @@ body {
 .bienvenido {
   color: #1d3557;
   font-style: italic;
-  font-size: 50px;
+  font-size: 45px;
   float: left;
 }
 
 .titulo {
-  padding-top: 200px;
+  padding-top: 150px;
+  padding-left: 20px;
+  text-align: center;
+}
+
+.titulo2 {
+  padding-top: 250px;
+  text-align: center;
+}
+
+@keyframes colores {
+  0%{background-color: #E5F0F0;}
+  25%{background-color: #D8E9E9;}
+  50%{background-color: #CAE2E2;}
+  75%{background-color: #B8D8D8;}
+  100%{background-color: #E5F0F0;}
 }
 
 .contenedorTextArea {
@@ -94,6 +145,9 @@ body {
   width: 40%;
   background-color: #f1faee;
   padding-bottom: 100px;
+  animation-name: colores;
+  animation-duration: 5s;
+  animation-iteration-count: infinite; 
 }
 
 .contenedorDesplazamiento {
@@ -103,6 +157,9 @@ body {
   height: 635px;
   background-color: #f1faee;
   padding-top: 200px;
+  animation-name: colores;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
 
 .textArea {
@@ -164,3 +221,5 @@ button:hover {
   font-weight: bold;
   border: 5px solid #1d3557;
 }
+
+

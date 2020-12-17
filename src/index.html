@@ -15,17 +15,17 @@
   <div id="root">
     <div class="pantallaUno" id="pantallaUno">
       <div class="contenedor" id="contenedor">
-        <img src="img/logo.png" alt="Logo" />
+        <img class="moveRight" src="img/logo.png" alt="Logo" />
         <br />
         <h1 class="logo">Cipher Vault</h1>
         <br />
         <form action="" name="formulario" method="get">
           <input class="btn-usuario" type="text" placeholder="Usuario" name="Usuario" required id="usuario" />
           <br /><br />
-          <input class="btn-usuario" type="password" name="password" required id="password" />
+          <input class="btn-usuario" type="password" placeholder="Contraseña" name="password" required id="password" />
           <br />
           <br />
-          <input class="btn-enviar" id="enviar" type="submit" name="Enviar" value="Enviar" />
+          <input class="btn-enviar" id="btn-enviar" type="submit" name="Enviar" value="Enviar" />
         </form>
         <br /><br />
       </div>
@@ -34,9 +34,9 @@
 
     <div class="pantallaDos" id="pantallaDos">
       <div class="contenedorBienvenido">
-        <img class="imagen" src="img/logo.png" alt="logo" />
+        <img class="imagen move" src="img/logo.png" alt="logo" />
         <h1 class="bienvenido titulo">Bienvenido a Cipher Vault</h1>
-        <h2 class="bienvenido">¡Nombre de Usuario!</h2>
+        <h2 class="bienvenido titulo2">¡Nombre de Usuario!</h2>
       </div>
 
       <div class="contenedorTextArea" id="contenedorCifrar">
@@ -51,7 +51,7 @@
       </div>
 
       <div class="contenedorDesplazamiento">
-        <input class="desplazamiento" type="number" placeholder="Coloca tu Llave" required id="desplazamiento" />
+        <input class="desplazamiento" type="text" placeholder="Coloca tu Llave" required id="desplazamiento" />
       </div>
 
       <div class="contenedorTextArea" id="contenedorDescifrar">

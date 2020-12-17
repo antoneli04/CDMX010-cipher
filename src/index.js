@@ -47,3 +47,9 @@ document.getElementById("copiarDesencriptado").addEventListener("click", functio
   contenido.select();
   document.execCommand("copy");
 });
+
+//Siguiente pagina
+document.getElementById("pantallaUno").addEventListener("click", function(){
+  pantallaUno.style.display= "none";
+  pantallaDos.style.display= "block";
+});
