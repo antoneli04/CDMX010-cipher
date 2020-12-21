@@ -86,12 +86,13 @@ body {
  /* display: none; */
 }
 
+/*
 @keyframes img{
-  0%{width: 150px;}
+  0%{width: 300px;}
   25%{width: 200px;}
   50%{width: 250px;}
   75%{width: 200;}
-  100%{width: 150px;}
+  100%{width: 300px;}
 }
 
 .move {
@@ -99,6 +100,7 @@ body {
   animation-duration: 5s;
   animation-iteration-count: infinite;
 }
+*/
 
 .pantallaDos img {
   width: 300px;
@@ -127,7 +129,8 @@ body {
 }
 
 .titulo2 {
-  padding-top: 250px;
+  padding-top: 0px;
+  padding-left: 20px;
   text-align: center;
 }
 

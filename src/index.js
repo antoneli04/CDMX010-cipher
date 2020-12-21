@@ -9,7 +9,7 @@ document.getElementById("btn-cifrar").addEventListener("click", function(){
   var mensaje = document.getElementById("cifrar").value;
   var numDesplazamientos = document.getElementById("desplazamiento").value;
   var valorFijo = parseInt(numDesplazamientos);
-  document.getElementById("descifrar").innerHTML = cipher.encode(mensaje, valorFijo);
+  document.getElementById("descifrar").innerHTML = cipher.encode(valorFijo, mensaje);
 }, true);
 
 //Boton Descifrar
@@ -18,7 +18,7 @@ document.getElementById("btn-descifrar").addEventListener("click", function(){
   var mensaje = document.getElementById("descifrar").value;
   var numDesplazamientos = document.getElementById("desplazamiento").value;
   var valorFijo = parseInt(numDesplazamientos);
-  document.getElementById("cifrar").innerHTML = cipher.decode(mensaje, valorFijo);
+  document.getElementById("cifrar").innerHTML = cipher.decode(valorFijo, mensaje);
 }, true);
 
 //Boton Borrar Cifrado
@@ -49,7 +49,7 @@ document.getElementById("copiarDesencriptado").addEventListener("click", functio
 });
 
 //Siguiente pagina
-document.getElementById("pantallaUno").addEventListener("click", function(){
+document.getElementById("btn-enviar").addEventListener("click", function(){
   pantallaUno.style.display= "none";
   pantallaDos.style.display= "block";
 });
